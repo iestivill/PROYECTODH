@@ -1,6 +1,18 @@
-header.main-header {
+header.main-header ul {
   font-style: italic;
-  font-size: 50px;
+  font-size: 25px;
   font-family: sans-serif;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+header.main-header ul li {
+  width: 18%;
+}
+
+.logo {
+
+
 }
