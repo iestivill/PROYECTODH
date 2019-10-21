@@ -12,9 +12,25 @@ header.main-header ul li {
   width: 13;
 }
 
-.logo {
 
-}
 header.main-header{
   background-color: red;
+}
+
+
+footer ul{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+
+}
+
+footer ul li {
+  width: 50%;
+}
+
+
+.logo {
+  width: 50px;
 }
