@@ -1,6 +1,6 @@
 header.main-header ul {
   font-style: italic;
-  font-size: 25px;
+  font-size: 17px;
   font-family: sans-serif;
   list-style: none;
   display: flex;
@@ -9,10 +9,12 @@ header.main-header ul {
 
 }
 header.main-header ul li {
-  width: 18%;
+  width: 13;
 }
 
 .logo {
 
-
+}
+header.main-header{
+  background-color: red;
 }
