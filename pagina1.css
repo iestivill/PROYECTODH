@@ -1,3 +1,12 @@
+body {background-image: url('http://i.stack.imgur.com/kx8MT.gif');
+    background-size: cover;
+
+
+
+    height: 100vh;
+    padding:0;
+    margin:0;}
+
 header.main-header ul {
   font-style: italic;
   font-size: 17px;
@@ -34,8 +43,4 @@ footer ul li {
 
 .logo {
   width: 50px;
-}
-
-.netflixfalso {
-  width: 90%;
 }
