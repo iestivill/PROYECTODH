@@ -1,27 +1,33 @@
 *{
-
-
 padding: 0;
 box-sizing: border-box;}
 
-
 header.main-header ul {
-  font-style: italic;
+  font-style: normal;
   font-size: 17px;
   font-family: sans-serif;
+  font-weight: 600;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-
 }
+
 header.main-header ul li {
-  width: 13;
+width: 13;
 }
 
+/* soporte para webkit. */ {
+webkit-font-smoothing: antialiased;
+/* Safari y Chrome. */
+text-rendering: optimizeLegibility;
 
-header.main-header{
-  background-color: red;
+/*  Firefox. */
+moz-osx-font-smoothing: grayscale;
+}
+
+header.main-header {
+background-color: #7FFFD4;
 }
 
 
@@ -37,7 +43,6 @@ footer ul li {
   width: 50%;
 
 }
-
 
 .logo {
   width: 50px;
