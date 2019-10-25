@@ -1,0 +1,25 @@
+*{
+padding: 0;
+box-sizing: border-box;}
+
+h1 {
+font-size: 50px;
+font-style: normal;
+font-family: monospace;
+margin-left: 585px;
+}
+
+header.main-header ul {
+  font-style: normal;
+  font-size: 17px;
+  font-family: sans-serif;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+header.main-header ul li {
+width: 13;
+}

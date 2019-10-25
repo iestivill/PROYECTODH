@@ -4,7 +4,7 @@ fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=64473b4750029f7eee1095d
     return response.json();
   })
   .then(function(data){
-    for(var i=0; i<data.length; i++)
+  //  for(var i=0; i<data.length; i++)
     console.log(data);
   })
 }
