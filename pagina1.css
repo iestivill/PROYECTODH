@@ -1,12 +1,18 @@
 *{
 padding: 0;
 box-sizing: border-box;}
+/* Header 1 */
+
+header{
+background-color: #008B8B;
+}
 
 h1 {
 font-size: 50px;
 font-style: normal;
 font-family: monospace;
 margin-left: 585px;
+color: #000000;
 }
 
 header.main-header ul {
@@ -14,12 +20,15 @@ header.main-header ul {
   font-size: 17px;
   font-family: sans-serif;
   font-weight: 600;
-  list-style: none;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
 header.main-header ul li {
-width: 13;
+width: 18%;
+margin:auto;
 }
+
+/* Fin Header 1 */
