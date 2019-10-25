@@ -3,6 +3,43 @@ padding: 0;
 box-sizing: border-box;}
 /* Header 1 */
 
+body {
+    background-color: #E0FFFF;
+}
+
+nav.main-nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.logosolo img {
+  width:40%;
+}
+
+.titulotabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo h1 {
+  background-color: #40E0D0;
+  padding-left: 40%;
+  margin: 0 auto;
+}
+.tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 80px;
+}
+
+.tabs ul li {
+  width:18%;
+}
+
 header{
 background-color: #008B8B;
 }
@@ -15,20 +52,12 @@ margin-left: 585px;
 color: #000000;
 }
 
-header.main-header ul {
-  font-style: normal;
-  font-size: 17px;
-  font-family: sans-serif;
-  font-weight: 600;
-  list-style-type: none;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-header.main-header ul li {
-width: 18%;
-margin:auto;
-}
 
 /* Fin Header 1 */
+
+/* Footer */
+footer img{
+
+}
+
+/* Fin Footer */
