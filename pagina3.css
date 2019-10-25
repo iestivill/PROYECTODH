@@ -43,7 +43,7 @@
   outline: none;
   border-radius: 35px;
   box-shadow: 0 1px #0091c2;
-  transition: width 0.5s;
+  transition: 0.5s;
 }
 
 .search > div > input::placeholder {
@@ -68,6 +68,30 @@
 
 .form {
 
+position: relative;
+
+}
+
+.form2 {
+
+  position: absolute;
+  top: 300px;
+  right: 300px;
+}
+
+.search {
 position: absolute;
+
+}
+
+
+.buscador {
+  position: relative;
+right: 50px;
+}
+
+* {
+background-color: #ADD8E6
+
 
 }
