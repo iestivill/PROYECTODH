@@ -9,9 +9,11 @@
   <script src="js/uikit.min.js" charset="utf-8"></script>
   <script src="js/uikit-icons.min.js" charset="utf-8"></script>
 
-  
+
     <link rel="stylesheet" href="css/4detalles.css">
   </head>
+
+
   <body>
     <header class="main-header">
 <nav class="main-nav">
@@ -19,7 +21,13 @@
     <img src="img/RAPI.png" alt="logoRAPI">
   </div>
   <!-- Barra de navegacion -->
-  <div class="navegacion"><input type="text" name="" placeholder="Search..."></div>
+  <div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <a href="pagina3.html" uk-search-icon></a>
+        <input class="uk-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
+ <!-- Fin barra de navegacion <div class="navegacion"><input type="text" name="" placeholder="Search..."></div> -->
     <!-- Fin barra de navegacion -->
   <div class="titulotabs">
     <div class="titulo">
@@ -45,11 +53,16 @@
 <div class="contenedor1">
 
   <div class="detalle-texto">
-<h2>TITULO</h2>
-<h3>FECHA</h3>
-<h3>DUURACION</h3>
-<h3>GENERO</h3>
-<h3>RATING</h3>
+<h2>TITULO:</h2>
+<h2 class="titulo.d"></h2>
+<h3>FECHA:</h3>
+<h3 class="fecha"></h3>
+<h3>DURACION:</h3>
+<h3 class="duracion"></h3>
+<h3>GENERO:</h3>
+<h3 class="genero"></h3>
+<h3>RATING:</h3>
+<h3 class="rating"></h3>
       </div>
 
       <div class="poster">
@@ -60,6 +73,7 @@
 
 
 <h3>RESUMEN DE LA SERIE</h3>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
 <h3> VER RECOMENDACIONES</h3>
 
@@ -83,8 +97,6 @@
 <div class="poster">
 <img src="img/logodh2.png" alt="">
 </div>
-
-
 
 </div>
 
