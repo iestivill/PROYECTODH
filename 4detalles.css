@@ -1,0 +1,100 @@
+*{
+padding: 0;
+box-sizing: border-box;}
+
+/* Header 1 */
+
+body {
+    background-color: #7FDBFF;
+ /* colores alternativos #87CEEB, */
+}
+
+nav.main-nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.logosolo img {
+  width:40%;
+}
+
+.titulotabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo h1 {
+  background-color: #0074D9;
+  /* colores alternativos #40E0D0, */
+  padding-left: 40%;
+  margin: 0 auto;
+}
+.tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 80px;
+}
+
+.tabs ul li {
+  width:18%;
+}
+
+header{
+background-color: #39CCCC;
+  /* colores alternativos #008B8B , */
+
+}
+
+h1 {
+font-size: 50px;
+font-style: normal;
+font-family: monospace;
+margin-left: 585px;
+color: #000000;
+}
+
+
+/* Fin Header 1 */
+
+/* Main */
+
+
+
+
+
+
+/* ver recomendaciones */
+div.contenedor2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+div.poster {
+margin-bottom: 5%;
+}
+
+/* termina ver recomendaciones */
+
+/* Footer */
+footer img{
+width: 5%;
+align-content: center;
+
+
+}
+.footer h3 {
+text-align: center;
+align-content: center;
+}
+
+.logoTMDB {
+text-align: center;
+}
+
+/* Fin Footer */
