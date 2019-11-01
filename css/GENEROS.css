@@ -1,0 +1,110 @@
+*{
+padding: 0;
+box-sizing: border-box;
+list-style-type: none;}
+
+/* Header 1 */
+
+body {
+    background-color: #7FDBFF;
+ /* colores alternativos #87CEEB, */
+}
+
+nav.main-nav {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.logosolo img {
+  width:40%;
+}
+
+.titulotabs {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.titulo {
+  background-color: #0074D9;
+  /* colores alternativos #40E0D0, */
+  /* padding-left: 40%;   */
+  margin: 0 auto;
+}
+.tabs ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style-type: none;
+  width: 100%;
+  padding-left: 80px;
+}
+
+.tabs ul li {
+  width:18%;
+}
+
+header{
+background-color: #39CCCC;
+  /* colores alternativos #008B8B , */
+
+}
+
+h1 {
+font-size: 50px;
+font-style: normal;
+font-family: monospace;
+text-align: center;
+font-weight: bolder;
+/* margin-left: 585px; */
+color: #000000;
+}
+
+
+
+h2 {
+
+}
+
+
+.uk-margin {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.uk-search .uk-search-icon {
+top: -18px;
+
+}
+/* Fin Header 1 */
+
+/* Main */
+main h2 {
+  margin-top: 5%;
+}
+
+
+h2.seriespopulares div ul li {
+  width: 10%;
+}
+
+/* Footer */
+footer img{
+width: 5%;
+align-content: center;
+
+
+}
+.footer h3 {
+text-align: center;
+align-content: center;
+font-size: 20px
+}
+
+.logoTMDB {
+text-align: center;
+}
+
+/* Fin Footer */
