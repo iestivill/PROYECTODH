@@ -1,6 +1,7 @@
 *{
 padding: 0;
-box-sizing: border-box;}
+box-sizing: border-box;
+list-style-type: none;}
 
 /* Header 1 */
 
@@ -30,7 +31,7 @@ justify-content: space-between;
   /* padding-left: 40%;   */
   margin: 0 auto;
 }
-.tabs ul {
+.tabs ul.tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -59,6 +60,8 @@ font-weight: bolder;
 color: #000000;
 }
 
+
+
 h2 {
 
 }
@@ -83,6 +86,9 @@ main h2 {
 }
 
 
+h2.seriespopulares div ul li {
+  width: 10%;
+}
 
 /* Footer */
 footer img{
