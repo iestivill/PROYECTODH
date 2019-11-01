@@ -74,13 +74,11 @@ div.uk-margin {
 
 
 .detalle-texto {
-width: 60%;
-}
-
-.poster {
-  width: 35%;
+margin-left: 10%;
+margin-top: 7%;
 
 }
+
 
 .poster img {
   width: 100%;
@@ -91,7 +89,9 @@ div.contenedor1 {
   justify-content: space-between;
   flex-wrap: wrap;
   flex-direction: row;
+
 }
+
 
 
 
@@ -107,6 +107,21 @@ div.contenedor2 {
 
 div.poster {
 margin-bottom: 5%;
+margin-top: 50px;
+margin-right: 100px;
+width: 30%;;
+}
+
+div.trailer{
+text-align: center;
+margin-bottom: 5%;
+margin-top: 5%;
+}
+
+div.trailer h2 {
+text-align: center;
+
+
 }
 
 /* termina ver recomendaciones */

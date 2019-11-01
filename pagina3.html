@@ -21,7 +21,13 @@
     <img src="img/RAPI.png" alt="logoRAPI">
   </div>
   <!-- Barra de navegacion -->
-  <div class="navegacion"><input type="text" name="" placeholder="Search..."></div>
+  <div class="uk-margin">
+    <form class="uk-search uk-search-default">
+        <a href="pagina3.html" uk-search-icon></a>
+        <input class="uk-search-input" type="search" placeholder="Search...">
+    </form>
+</div>
+ <!-- Fin barra de navegacion <div class="navegacion"><input type="text" name="" placeholder="Search..."></div> -->
     <!-- Fin barra de navegacion -->
   <div class="titulotabs">
     <div class="titulo">
@@ -61,28 +67,26 @@
 
 </form>
 
-        <label class="form2" for="Seleciona un genero">Seleciona un genero</label>
+        <label class="form-genero" for="Seleciona un genero">Seleciona un genero</label>
 
         <select>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
           <option value="Animation">Animation</option>
           <option value="Comedy">Comedy</option>
-          <option value="Crime">Crime</option>
-          <option value="Documentray">Documentray</option>
-          <option value="Drama">Drama</option>
-          <option value="Family">Family</option>
-          <option value="Fantasy">Fantasy</option>
-          <option value="History">History</option>
-          <option value="Horror">Horror</option>
-          <option value="Music">Music</option>
-          <option value="Mistery">Mistery</option>
-          <option value="Science-Fiction">Science-Fiction</option>
-          <option value="Tv-Shows">Tv-Shows</option>
-          <option value="Thriller">Thriller</option>
-          <option value="War">War</option>
-          <option value="Western">Western</option>
         </select>
+
+        <label class="form-nodeseado" for="Genero que desea excluir">Genero que desea excluir</label>
+
+        <select>
+          <option value="">action</option>
+        </select>
+
+        <label class="form-año " for="Seleccione año de estreno">Seleccione año de estreno</label>
+
+         <select>
+           <option value="2016">2016</option>
+         </select>
 
         </form>
 </div>
