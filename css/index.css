@@ -75,8 +75,8 @@ h2 {
   justify-content: space-around;
 }
 
-.uk-search.uk-search-icon {
-top: -18px;
+.uk-search-default .uk-search-icon {
+top: -60px;
 
 }
 
