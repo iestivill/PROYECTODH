@@ -87,7 +87,8 @@ window.onload = function() {
     }
   })
 
-  
+
+
 
   // https://api.themoviedb.org/3/tv/popular?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&page=1&with_genres=ID_DEL_GENERO
   // Las series mas populares con un genero determinado
