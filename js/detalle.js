@@ -20,7 +20,7 @@ window.onload = function() {
       //data.genres[i]
     var genero = document.querySelector(".genero")
 
-      genero.innerHTML +=  data.genres[i].name + " . "
+      genero.innerHTML +=  data.genres[i].name + ". "
 
   }
 
@@ -33,7 +33,7 @@ window.onload = function() {
 for (var i = 0; i < data.created_by.length; i++) {
   data.created_by[i]
     var director = document.querySelector(".director")
-    director.innerHTML +=   data.created_by[i].name + " . "
+    director.innerHTML +=   data.created_by[i].name + ". "
 
   }
 
