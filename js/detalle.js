@@ -51,7 +51,25 @@ for (var i = 0; i < data.created_by.length; i++) {
   })
 
 
+//trailer
+fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
+.then(function(response) {
+  return response.json();
+})
+.then(function(datos){
+  console.log(datos);
+  for (var i = 0; i < datos.results.length; i++) {
+  var key = datos.results[i].key
+  var youtube = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  var trailer = document.querySelector(".trailer").innerHTML += youtube
+  console.log(youtube);
+}
+})
 
+
+
+
+//termina trailer
 
   fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&page=1")
   .then(function(response) {
