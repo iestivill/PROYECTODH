@@ -1,7 +1,8 @@
 *{
 padding: 0;
 box-sizing: border-box;
-list-style-type: none;}
+list-style-type: none;
+}
 
 /* Header 1 */
 
@@ -9,7 +10,13 @@ body {
     background-color: #7FDBFF;
  /* colores alternativos #87CEEB, */
 }
-
+a h1{
+  opacity: 0;
+}
+a:hover h1{
+  opacity: 1;
+  transition-duration: 0.6s;
+}
 nav.main-nav {
 display: flex;
 flex-wrap: wrap;

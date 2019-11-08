@@ -33,8 +33,8 @@ window.onload = function() {
       var a = '<a href="detalle.html?id='+ estrenos[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+estrenos[i].poster_path+'" alt="">'
-      a += '<div class="uk-position-center uk-panel"><h1>'+estrenos[i].name+'</h1></div>'
-        a += '</li>'
+      a += '<div class="uk-position-center uk-panel"><h1>'+estrenos[i].name.toUpperCase()+'</h1></div>'
+      a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
     }

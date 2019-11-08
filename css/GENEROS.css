@@ -61,11 +61,15 @@ font-weight: bolder;
 color: #000000;
 }
 
+.titulo h1 a {
 
-
-h2 {
+  font-weight:bold;
+  color: black;
+text-decoration: none;
 
 }
+
+
 
 
 .uk-margin {
