@@ -84,6 +84,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7
       a += '<li>'
       a += '<img src="'+prepath+recommendaciones[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+recommendaciones[i].name+'</h1></div>'
+        a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
 
