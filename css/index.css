@@ -32,6 +32,14 @@ justify-content: space-between;
   /* padding-left: 40%;   */
   margin: 0 auto;
 }
+
+.titulo h1 a {
+
+  font-weight:bold;
+  color: black;
+text-decoration: none;
+
+}
 .tabs ul.tabs {
   display: flex;
   flex-wrap: wrap;
@@ -93,6 +101,22 @@ h2.seriespopulares div ul li {
   width: 10%;
 }
 
+
+#estrenos {
+font-weight: bold;
+}
+
+#mejores {
+font-weight: bold;
+}
+
+#popular {
+font-weight: bold;
+}
+
+#proximos {
+font-weight: bold;
+}
 /* Footer */
 footer img{
 width: 5%;

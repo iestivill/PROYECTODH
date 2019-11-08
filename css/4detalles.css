@@ -32,6 +32,14 @@ justify-content: space-between;
   /* padding-left: 40%;   */
   margin: 0 auto;
 }
+
+.titulo h1 a {
+
+  font-weight:bold;
+  color: black;
+text-decoration: none;
+
+}
 .tabs ul.tabs {
   display: flex;
   flex-wrap: wrap;
@@ -107,10 +115,26 @@ div.contenedor1 {
 
 }
 
-
-
-
 /* fin parte de arriba */
+
+/* diseno detalles */
+
+.detalle-texto {
+
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+font-style: normal;
+font-family: monospace;
+font-size: 25px;
+color: black;
+font-weight: bold;
+
+}
+
+/* fin diseno detalles */
+
+
 
 /* trailer */
 
