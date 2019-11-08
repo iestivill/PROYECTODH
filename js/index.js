@@ -29,7 +29,8 @@ window.onload = function() {
     var estrenos = respuesta.results
 
     var ul = document.querySelector(".slide-estrenos")
-    for (var i = 0; i < estrenos.length; i++) {
+    for (var i = 0; i < estrenos.length; i++)  {
+      
       var a = '<a href="detalle.html?id='+ estrenos[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+estrenos[i].poster_path+'" alt="">'

@@ -204,3 +204,20 @@ text-align: center;
 }
 
 /* Fin Footer */
+
+
+/* ======================
+STYLE HERNI
+====================== */
+
+.combo-texto {
+  display:flex
+}
+
+.combo-texto > * {
+  margin: 0
+}
+
+.combo-texto h3 {
+  margin-right: 10px
+}
