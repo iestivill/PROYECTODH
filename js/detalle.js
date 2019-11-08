@@ -19,7 +19,8 @@ window.onload = function() {
     for (var i = 0; i < data.genres.length; i++) {
       //data.genres[i]
     var genero = document.querySelector(".genero")
-      genero.innerHTML += data.genres[i].name + ". "
+
+      genero.innerHTML += data.genres[i].name + " . "
 
   }
 
