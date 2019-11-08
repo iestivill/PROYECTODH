@@ -112,6 +112,17 @@ div.contenedor1 {
 
 /* fin parte de arriba */
 
+/* trailer */
+
+.trailer {
+
+text-align: center;
+
+}
+
+
+
+/* FIN de trailer */
 /* ver recomendaciones */
 div.contenedor2 {
   display: flex;
