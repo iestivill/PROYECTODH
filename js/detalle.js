@@ -19,7 +19,7 @@ window.onload = function() {
     for (var i = 0; i < data.genres.length; i++) {
       //data.genres[i]
     var genero = document.querySelector(".genero")
-      genero.innerHTML += data.genres[i].name + ' / '
+      genero.innerHTML += data.genres[i].name + '.'
 
   }
 
@@ -48,24 +48,4 @@ for (var i = 0; i < data.created_by.length; i++) {
   .catch(function(e){
     console.log(e)
   })
-
-
-
-  fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&page=1")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(data){
-    var recommendaciones = data.results;
-    var prepath = 'https://image.tmdb.org/t/p/original/'
-    var ul = document.querySelector(".slide-recommendaciones")
-    for (var i = 0; i < recommendaciones.length; i++) {
-      var a = '<a href="detalle.html?id='+ recommendaciones[i].id + '">'
-      a += '<li>'
-      a += '<img src="'+prepath+recommendaciones[i].poster_path+'" alt="">'
-      a += '<div class="uk-position-center uk-panel"><h1>'+recommendaciones[i].name+'</h1></div>'
-      a += '</a>'
-      ul.innerHTML += a;
-
-}  })
-}
+  }
