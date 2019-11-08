@@ -66,6 +66,7 @@ for (var i = 0; i < data.created_by.length; i++) {
       a += '<li>'
       a += '<img src="'+prepath+recommendaciones[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+recommendaciones[i].name+'</h1></div>'
+        a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
 

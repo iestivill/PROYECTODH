@@ -14,6 +14,7 @@ window.onload = function() {
       a += '<li>'
       a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name+'</h1></div>'
+      a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
     }
@@ -33,6 +34,7 @@ window.onload = function() {
       a += '<li>'
       a += '<img src="'+prepath+estrenos[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+estrenos[i].name+'</h1></div>'
+        a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
     }
@@ -52,6 +54,7 @@ window.onload = function() {
       a += '<li>'
       a += '<img src="'+prepath+mejores[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+mejores[i].name+'</h1></div>'
+        a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
     }
@@ -69,6 +72,7 @@ window.onload = function() {
       a += '<li>'
       a += '<img src="'+prepath+proximos[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+proximos[i].name+'</h1></div>'
+      a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
     }
