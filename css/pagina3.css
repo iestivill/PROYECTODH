@@ -39,6 +39,15 @@ text-decoration: none;
   /* padding-left: 40%;   */
   margin: 0 auto;
 }
+
+.titulo h1 a {
+
+  font-weight:bold;
+  color: black;
+text-decoration: none;
+
+}
+
 .tabs ul.tabs {
   display: flex;
   flex-wrap: wrap;
