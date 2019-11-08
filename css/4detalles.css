@@ -17,7 +17,7 @@ justify-content: space-between;
 }
 
 .logosolo img {
-  width:40%;
+  width:70%;
 }
 
 .titulotabs {
@@ -26,12 +26,13 @@ justify-content: space-between;
 }
 
 .titulo {
+
   background-color: #0074D9;
   /* colores alternativos #40E0D0, */
   /* padding-left: 40%;   */
   margin: 0 auto;
 }
-.tabs ul {
+.tabs ul.tabs {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -61,8 +62,22 @@ color: #000000;
 }
 
 
-div.uk-margin {
-  margin-right: 5%;
+
+h2 {
+
+}
+
+
+.uk-margin {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.uk-search-default .uk-search-icon {
+top: -60px;
+
 }
 
 /* Fin Header 1 */
