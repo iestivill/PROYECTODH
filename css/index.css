@@ -1,12 +1,15 @@
 *{
 padding: 0;
 box-sizing: border-box;
-list-style-type: none;}
+list-style-type: none;
+
+}
 
 /* Header 1 */
 
 body {
-    background-color: #7FDBFF;
+    background-image: url(https://media.giphy.com/media/l4KihuqeuJEi9qLSM/giphy.gif);
+    background-size: contain;
  /* colores alternativos #87CEEB, */
 }
 
