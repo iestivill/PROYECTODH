@@ -19,32 +19,39 @@
     <header class="main-header">
 <nav class="main-nav">
   <div class="logosolo">
-    <img src="img/RAPI.png" alt="logoRAPI">
+  <a href="index.html"><img src="img/RAPI.png" alt="logoRAPI"></a>
   </div>
   <!-- Barra de navegacion -->
+
   <div class="uk-margin">
-    <form class="uk-search uk-search-default">
+      <h2><a href="#">LOGIN</a></h2>
+    <form class="uk-search uk-search-default" action="search.html" method="get">
         <a href="pagina3.html" uk-search-icon></a>
-        <input class="uk-search-input" type="search" placeholder="Search...">
+        <input class="uk-search-input" type="search" placeholder="Search..." name="busqueda">
     </form>
 </div>
- <!-- Fin barra de navegacion <div class="navegacion"><input type="text" name="" placeholder="Search..."></div> -->
+
+
+
+
     <!-- Fin barra de navegacion -->
   <div class="titulotabs">
     <div class="titulo">
-      <h1>RAPISERIES</h1>
+      <h1> <a href="index.html">RAPISERIES</a></h1>
     </div>
     <div class="tabs">
-      <ul>
-          <li><a>BUSCAR SERIES</a></li>
-          <li><a>SERIES POPULARES</a></li>
-          <li><a>MEJORES PUNTUADAS</a></li>
-          <li><a>ULTIMAS SERIES</a></li>
-
+      <ul class="tabs">
+          <li><a href="pagina3.html">BUSCADOR AVANZADO</a></li>
+          <li><a href= "#popular">SERIES POPULARES</a></li>
+          <li><a href="#mejores">MEJORES PUNTUADAS</a></li>
+          <li> <a href="#proximos">PROXIMOS ESTRENOS</a></li>
+          <li> <a> <button class="uk-button uk-button-default" type="button">GENEROS</button>
+  <div uk-dropdown>
+    <ul class="uk-nav uk-dropdown-nav" id="listado-de-generos"></ul>
+</div></a></li>
+          </div>
       </ul>
     </div>
-
-  </div>
 </nav>
 
     </header>
