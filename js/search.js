@@ -18,7 +18,7 @@ console.log(idSearchResult);
           var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
           a += '<li>'
           a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
-          a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name+'</h1></div>'
+          a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
           a += '</li>'
           a += '</a>'
           ul.innerHTML += a;
