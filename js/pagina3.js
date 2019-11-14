@@ -34,7 +34,7 @@ window.onload = function(){
     .then(function(respuesta) {
       for (var i = 0; i < respuesta.genres.length; i++) {
         var listadoGeneros = document.querySelector("#formulario-generos");
-        listadoGeneros.innerHTML += "<option href='resultados-buscador.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</option>";
+        listadoGeneros.innerHTML +='<option value="' + respuesta.genres[i].id +'" > '+ respuesta.genres[i].name +' </option>';
         if(respuesta.genres[i].id == idGenero){
           // console.log('hola');
           var h1 = document.querySelector('.genreTitle')
@@ -80,7 +80,7 @@ window.onload = function(){
       .then(function(respuesta) {
         for (var i = 0; i < respuesta.genres.length; i++) {
           var listadoGeneros = document.querySelector("#nodeseado");
-          listadoGeneros.innerHTML += "<option href='resultados-buscador.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</option>";
+          listadoGeneros.innerHTML += '<option value="' + respuesta.genres[i].id +'" > '+ respuesta.genres[i].name +' </option>';
           if(respuesta.genres[i].id == idGenero){
             // console.log('hola');
             var h1 = document.querySelector('.genreTitle')
@@ -100,4 +100,14 @@ window.onload = function(){
 
       })
 
+}
+
+
+var form = document.querySelector('.formularioform')
+
+form.onsubmit=function (e) {
+  e.preventDefault()
+  var 
+  var
+  var
 }
