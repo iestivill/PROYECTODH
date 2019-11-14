@@ -110,7 +110,7 @@ margin-top: 7%;
 div.contenedor1 {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
 
 }
