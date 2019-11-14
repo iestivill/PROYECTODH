@@ -13,7 +13,7 @@ window.onload = function() {
       var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
-      a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name+'</h1></div>'
+      a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
       a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
@@ -30,7 +30,7 @@ window.onload = function() {
 
     var ul = document.querySelector(".slide-estrenos")
     for (var i = 0; i < estrenos.length; i++)  {
-      
+
       var a = '<a href="detalle.html?id='+ estrenos[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+estrenos[i].poster_path+'" alt="">'
@@ -54,7 +54,7 @@ window.onload = function() {
       var a = '<a href="detalle.html?id='+ mejores[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+mejores[i].poster_path+'" alt="">'
-      a += '<div class="uk-position-center uk-panel"><h1>'+mejores[i].name+'</h1></div>'
+      a += '<div class="uk-position-center uk-panel"><h1>'+mejores[i].name.toUpperCase()+'</h1></div>'
         a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
@@ -72,7 +72,7 @@ window.onload = function() {
       var a = '<a href="detalle.html?id='+ proximos[i].id + '">'
       a += '<li>'
       a += '<img src="'+prepath+proximos[i].poster_path+'" alt="">'
-      a += '<div class="uk-position-center uk-panel"><h1>'+proximos[i].name+'</h1></div>'
+      a += '<div class="uk-position-center uk-panel"><h1>'+proximos[i].name.toUpperCase()+'</h1></div>'
       a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
