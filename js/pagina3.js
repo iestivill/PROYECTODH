@@ -4,14 +4,37 @@ window.onload = function(){
   var idGenero = generosObj.get('genero');
 
 
+
+  fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(respuesta) {
+    for (var i = 0; i < respuesta.genres.length; i++) {
+      var listadoGeneros = document.querySelector("#listado-de-generos");
+      listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
+      if(respuesta.genres[i].id == idGenero){
+        // console.log('hola');
+        var h1 = document.querySelector('.genreTitle')
+        h1.innerHTML = respuesta.genres[i].name
+      }
+    }
+
+  })
+  .catch(function(e){
+    console.log(e)
+
+  })
+
+
     fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
     .then(function(response) {
       return response.json();
     })
     .then(function(respuesta) {
       for (var i = 0; i < respuesta.genres.length; i++) {
-        var listadoGeneros = document.querySelector("#listado-de-generos");
-        listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
+        var listadoGeneros = document.querySelector("#formulario-generos");
+        listadoGeneros.innerHTML += "<option href='resultados-buscador.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</option>";
         if(respuesta.genres[i].id == idGenero){
           // console.log('hola');
           var h1 = document.querySelector('.genreTitle')
@@ -56,8 +79,8 @@ window.onload = function(){
       })
       .then(function(respuesta) {
         for (var i = 0; i < respuesta.genres.length; i++) {
-          var listadoGeneros = document.querySelector("#formulario-generos");
-          listadoGeneros.innerHTML += "<select href='resultados-buscador.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</select>";
+          var listadoGeneros = document.querySelector("#nodeseado");
+          listadoGeneros.innerHTML += "<option href='resultados-buscador.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</option>";
           if(respuesta.genres[i].id == idGenero){
             // console.log('hola');
             var h1 = document.querySelector('.genreTitle')
