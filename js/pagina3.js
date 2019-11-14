@@ -88,6 +88,12 @@ window.onload = function(){
           }
         }
 
+        for (var i = 2020; i > 1959; i--) {
+          var option = '<option value="'+ i +'">'+ i +'</option>'
+          document.querySelector("#selectaño").innerHTML+=option
+        }
+
+
       })
       .catch(function(e){
         console.log(e)
