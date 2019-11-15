@@ -111,6 +111,18 @@ top: -60px;
 button a {
   text-decoration: none;
 }
+
+
+a h1{
+  opacity: 0;
+}
+a:hover h1{
+  opacity: 1;
+  transition-duration: 0.6s;
+}
+
+
+
 /* Footer */
 footer img{
 width: 5%;

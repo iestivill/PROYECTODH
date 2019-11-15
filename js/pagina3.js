@@ -117,7 +117,7 @@ window.onload = function(){
 
           var error = false;
 
-          
+
           if (opcionGeneroElegido == ""){
             error = true;
             e.preventDefault()
@@ -142,12 +142,43 @@ window.onload = function(){
             urlBuscar += "&first_air_date_year="+ opcionAnioElegido
           }
           if (opcionGeneroElegido != ""){
-            urlBuscar += "&with_genres=="+ opcionGeneroElegido
+            urlBuscar += "&with_genres="+ opcionGeneroElegido
           }
           if (opcionSinGenero != ""){
             urlBuscar += "&without_genres="+ opcionSinGenero
           }
           console.log(urlBuscar);
+
+          fetch(urlBuscar)
+
+
+
+          .then(function(response2){
+            return response2.json();
+          })
+          .then(function(respuesta2) {
+            var pelis = respuesta2.results;
+            var prepath = 'https://image.tmdb.org/t/p/original/'
+            // console.log(pelis);
+            var ul = document.querySelector(".resultadosbusc")
+            for (var i = 0; i < pelis.length; i++) {
+              if(pelis[i].poster_path != null){
+                var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
+                a += '<li>'
+                a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
+                a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
+                a += '</li>'
+                a += '</a>'
+                ul.innerHTML += a;
+              }
+
+            }
+
+          }
+          )
+          }
+
+
           }
 
 
@@ -162,5 +193,3 @@ window.onload = function(){
          // }
 
       }
-
-}
