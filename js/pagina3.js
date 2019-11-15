@@ -118,10 +118,10 @@ window.onload = function(){
           var error = false;
 
 
-          if (opcionGeneroElegido == ""){
+          if (opcionGeneroElegido == "" || opcionSinGenero == ""){
             error = true;
             e.preventDefault()
-            alert("Completa todos los campos restantes")
+            alert("Los dos primeros campos son obligatorios")
 
           }
 
@@ -148,12 +148,7 @@ window.onload = function(){
             urlBuscar += "&without_genres="+ opcionSinGenero
           }
           console.log(urlBuscar);
-
-
                     fetch(urlBuscar)
-
-
-
                     .then(function(response2){
                       return response2.json();
                     })
@@ -177,13 +172,10 @@ window.onload = function(){
 
                     }
                     )
-                    }
-
-
 
 
           }
 
 
 
-}
+}}

@@ -101,4 +101,56 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095
     listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
   }
 })
+
+
+var recuperoStorage = localStorage.getItem("seriesFavoritas");
+
+// Si todavía no tenía gifs favoritos
+if (recuperoStorage == null) {
+  // Creo una lista vacia
+  seriesFavoritas = [];
+} else {
+  // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
+  seriesFavoritas = JSON.parse(recuperoStorage);
 }
+
+var datos = new URLSearchParams(location.search);
+var idSerie = datos.get("idSerie");
+
+if (seriesFavoritas.includes(idSerie)) {
+  document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
+}
+
+
+
+fetch("" + idSerie + "")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(serie) {
+    document.querySelector("h1").innerHTML = serie.data.title;
+    document.querySelector("img").src = serie.data.images.original.url;
+  })
+
+  document.querySelector("button").onclick = function() {
+
+
+    //Paso 2: Modificar la informacion
+    // Si el gif ya era favorito
+    if (seriesFavoritas.includes(idSerie)) {
+      // Lo quito
+      var index = seriesFavoritas.indexOf(idSerie);
+    seriesFavoritas.splice(index, 1);
+      document.querySelector("button").innerHTML = "AGREGAR FAVORITO";
+    } else {
+      //Lo agrego
+    seriesFavoritas.push(idGif);
+      document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
+    }
+
+
+    //Paso 3: Escribir en storage
+    var infoParaStorage = JSON.stringify(seriesFavoritas);
+    localStorage.setItem("seriesFavoritas", infoParaStorage);
+    console.log(localStorage);
+  }}
