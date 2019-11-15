@@ -9,6 +9,17 @@ body {
     background-color: #7FDBFF;
  /* colores alternativos #87CEEB, */
 }
+ul.tabs a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+p.resumen {
+
+text-align: center;
+color: black;
+}
 
 nav.main-nav {
 display: flex;
@@ -71,7 +82,9 @@ color: #000000;
 
 
 
-h2 {
+h3 {
+text-align: center;
+color: black;
 
 }
 
