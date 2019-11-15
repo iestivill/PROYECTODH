@@ -10,6 +10,11 @@ body {
  /* colores alternativos #87CEEB, */
 
 }
+ul.tabs a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
 
 nav.main-nav {
 display: flex;

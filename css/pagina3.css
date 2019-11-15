@@ -105,6 +105,12 @@ color: white
 top: -60px;
 
 }
+ul.tabs a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+
 
 
 /* Fin Header 1 */
