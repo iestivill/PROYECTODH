@@ -23,9 +23,9 @@ window.onload = function() {
 //var generosObj = new URLSearchParams(location.search);
 //var idGenero = generosObj.get('genero');
 
-//var idAno = respuesta2.results
-//var idSeleccion = respuesta2.results
-//var idExcluir = respuesta2.results
+var idAno = respuesta2.results
+var idSeleccion = respuesta2.results
+var idExcluir = respuesta2.results
 
 fetch("https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&sort_by=popularity.desc&first_air_date_year="+ idAno +"&with_genres="+idSeleccion+"&without_genres="+idExcluir)
 

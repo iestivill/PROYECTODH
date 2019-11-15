@@ -67,6 +67,17 @@ header{
 
 }
 
+form.formularioform{
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+text-align: center;
+width: 50%;
+margin-top: 2%;
+margin-left: 25%;
+margin-bottom: 7%;
+}
+
 h1 {
 font-size: 50px;
 font-style: normal;
@@ -97,7 +108,9 @@ top: -60px;
 
 
 /* Fin Header 1 */
-
+button a {
+  text-decoration: none;
+}
 /* Footer */
 footer img{
 width: 5%;

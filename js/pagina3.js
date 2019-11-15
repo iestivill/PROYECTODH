@@ -117,11 +117,7 @@ window.onload = function(){
 
           var error = false;
 
-          if (opcionSinGenero == "") {
-            error = true;
-            alert("Completa todos los campos")
-          }
-
+          
           if (opcionGeneroElegido == ""){
             error = true;
             e.preventDefault()
@@ -129,12 +125,7 @@ window.onload = function(){
 
           }
 
-          if (opcionAnioElegido == ""){
-            error = true
-            e.preventDefault()
-            alert("Completa todos los campos")
 
-          }
 
           if (opcionGeneroElegido == opcionSinGenero){
             error = true;
@@ -143,9 +134,20 @@ window.onload = function(){
 
           }
 
-          if (error == false) {
-            // Mostrar resultados
 
+
+          if (error == false) {
+          var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&sort_by=popularity.desc"
+          if (opcionAnioElegido != ""){
+            urlBuscar += "&first_air_date_year="+ opcionAnioElegido
+          }
+          if (opcionGeneroElegido != ""){
+            urlBuscar += "&with_genres=="+ opcionGeneroElegido
+          }
+          if (opcionSinGenero != ""){
+            urlBuscar += "&without_genres="+ opcionSinGenero
+          }
+          console.log(urlBuscar);
           }
 
 
