@@ -15,7 +15,7 @@ window.onload = function(){
         if(respuesta.genres[i].id == idGenero){
           // console.log('hola');
           var h1 = document.querySelector('.genreTitle')
-          h1.innerHTML = respuesta.genres[i].name
+          h1.innerHTML = respuesta.genres[i].name.toUpperCase()
         }
       }
 
