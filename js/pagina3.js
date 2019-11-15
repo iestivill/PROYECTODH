@@ -90,7 +90,7 @@ window.onload = function(){
 
         for (var i = 2020; i > 1959; i--) {
           var option = '<option value="'+ i +'">'+ i +'</option>'
-          document.querySelector("#selectaño").innerHTML+=option
+          document.querySelector("#selectanio").innerHTML+=option
         }
 
 
@@ -100,14 +100,56 @@ window.onload = function(){
 
       })
 
-}
+      var form = document.querySelector('.formularioform')
 
 
-var form = document.querySelector('.formularioform')
+      form.onsubmit = function(e) {
+          e.preventDefault()
+          var selectGeneros = document.querySelector("#formulario-generos");
+          var selectSinGeneros = document.querySelector("#nodeseado");
+          var selectAnio = document.querySelector("#selectanio");
+          var opcionGeneroElegido = selectGeneros.options[selectGeneros.selectedIndex].value;
+          var opcionSinGenero = selectSinGeneros.options[selectSinGeneros.selectedIndex].value;
+          var opcionAnioElegido = selectAnio.options[selectAnio.selectedIndex].value;
+          console.log(opcionGeneroElegido);
+          console.log(opcionSinGenero);
+          console.log(opcionAnioElegido);
 
-form.onsubmit=function (e) {
-  e.preventDefault()
-  var 
-  var
-  var
+          if (opcionSinGenero == "") {
+            e.preventDefault()
+            alert("Completa todos los campos")
+          }
+
+          if (opcionGeneroElegido == ""){
+            e.preventDefault()
+            alert("Completa todos los campos")
+
+          }
+
+          if (opcionAnioElegido == ""){
+            e.preventDefault()
+            alert("Completa todos los campos")
+
+          }
+
+          if (opcionGeneroElegido = opcionSinGenero){
+            e.preventDefault()
+            alert("Revisa los generos elegidos.")
+
+          }
+
+
+
+
+         // if (valor == null ) {
+         //   e.preventDefault()
+         //  alert("ERROR completa los campos faltantes")
+         // }
+         // else if (SI EL GENERO ELEGIDO ES EL MISMO QUE EL EXLUIDO) {
+         //   e.preventDefault()
+         //   alert("")OTRO MENSAJE DE ERROR
+         // }
+
+      }
+
 }
