@@ -34,7 +34,7 @@ text-decoration: none;
 
 .titulo {
 
-  background-color: #0074D9;
+    /*background-color: #0074D9;*/
   /* colores alternativos #40E0D0, */
   /* padding-left: 40%;   */
   margin: 0 auto;
@@ -62,7 +62,7 @@ text-decoration: none;
 }
 
 header{
-background-color: #39CCCC;
+ background-color: #39CCCC;
   /* colores alternativos #008B8B , */
 
 }
@@ -78,9 +78,8 @@ color: #000000;
 }
 
 
-
-h2 {
-
+.estrenos{
+color: white
 }
 
 
@@ -109,6 +108,7 @@ align-content: center;
 .footer h3 {
 text-align: center;
 align-content: center;
+color: white;
 }
 
 .logoTMDB {
@@ -116,20 +116,3 @@ text-align: center;
 }
 
 /* Fin Footer */
-
-
-/* inicio configuracion buscador avanzado  */
-
-.navegacion{
-
-
-}
-
-.search {
-
-}
-
-footer {
-
-}
-/* fin buscador avanzado*/

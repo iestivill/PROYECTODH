@@ -115,29 +115,38 @@ window.onload = function(){
           console.log(opcionSinGenero);
           console.log(opcionAnioElegido);
 
+          var error = false;
+
           if (opcionSinGenero == "") {
-            e.preventDefault()
+            error = true;
             alert("Completa todos los campos")
           }
 
           if (opcionGeneroElegido == ""){
+            error = true;
             e.preventDefault()
             alert("Completa todos los campos")
 
           }
 
           if (opcionAnioElegido == ""){
+            error = true
             e.preventDefault()
             alert("Completa todos los campos")
 
           }
 
-          if (opcionGeneroElegido = opcionSinGenero){
+          if (opcionGeneroElegido == opcionSinGenero){
+            error = true;
             e.preventDefault()
             alert("Revisa los generos elegidos.")
 
           }
 
+          if (error == false) {
+            // Mostrar resultados
+
+          }
 
 
 
