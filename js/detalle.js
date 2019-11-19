@@ -115,24 +115,24 @@ if (recuperoStorage == null) {
 }
 
 var datos = new URLSearchParams(location.search);
-var idSerie = datos.get("idSerie");
+var idSerie = datos.get("id");
 
 if (seriesFavoritas.includes(idSerie)) {
-  document.querySelector("button.fav").innerHTML = "QUITAR DE FAVORITOS";
+  document.querySelector(".fav").innerHTML = "QUITAR DE FAVORITOS";
 }
 
 
 
-fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
-  .then(function(response) {
-    return response.json();
-  })
-  .then(function(serie) {
-    document.querySelector("h1").innerHTML = serie.data.title;
-    document.querySelector("img").src = serie.data.images.original.url;
-  })
+// fetch("" + idSerie + "")
+//   .then(function(response) {
+//     return response.json();
+//   })
+//   .then(function(serie) {
+//     document.querySelector("h1").innerHTML = serie.data.title;
+//     document.querySelector("img").src = serie.data.images.original.url;
+//   })
 
-  document.querySelector("button.fav").onclick = function() {
+  document.querySelector(".fav").onclick = function() {
 
 
     //Paso 2: Modificar la informacion
