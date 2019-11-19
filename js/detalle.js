@@ -118,7 +118,7 @@ var datos = new URLSearchParams(location.search);
 var idSerie = datos.get("idSerie");
 
 if (seriesFavoritas.includes(idSerie)) {
-  document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
+  document.querySelector("button.fav").innerHTML = "QUITAR DE FAVORITOS";
 }
 
 
@@ -132,7 +132,7 @@ fetch("" + idSerie + "")
     document.querySelector("img").src = serie.data.images.original.url;
   })
 
-  document.querySelector("button").onclick = function() {
+  document.querySelector("button.fav").onclick = function() {
 
 
     //Paso 2: Modificar la informacion
@@ -141,11 +141,11 @@ fetch("" + idSerie + "")
       // Lo quito
       var index = seriesFavoritas.indexOf(idSerie);
     seriesFavoritas.splice(index, 1);
-      document.querySelector("button").innerHTML = "AGREGAR FAVORITO";
+      document.querySelector("button.fav").innerHTML = "AGREGAR FAVORITO";
     } else {
       //Lo agrego
     seriesFavoritas.push(idSerie);
-      document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
+      document.querySelector("button.fav").innerHTML = "QUITAR DE FAVORITOS";
     }
 
 
