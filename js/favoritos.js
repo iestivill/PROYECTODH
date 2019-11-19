@@ -1,23 +1,7 @@
 window.onload = function() {
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// dropdown
   fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
   .then(function(response) {
     return response.json();
@@ -32,31 +16,10 @@ window.onload = function() {
   })
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// favoritos
   //Paso 1: Leo Storage
 
-  var recuperoStorage = localStorage.getItem("seriesFavoritas");
+  var recuperoStorage = localStorage.getItem("id");
 
   // Si todavía no tenía series favoritos
   if (recuperoStorage == null) {
@@ -67,6 +30,26 @@ window.onload = function() {
   seriesFavoritas = JSON.parse(recuperoStorage);
   }
 
+
+  fetch("https://api.themoviedb.org/3/tv/"+ id +"?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(respuesta) {
+    console.log(respuesta);
+    var pelis = respuesta;
+    var prepath = 'https://image.tmdb.org/t/p/original/'
+    // console.log(pelis);
+    var ul = document.querySelector(".slide-seriesFavoritas")
+    for (var i = 0; i < pelis.length; i++) {
+      var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
+      a += '<li>'
+      a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
+      a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
+      a += '</li>'
+      a += '</a>'
+      ul.innerHTML += a;
+    }
   // for (var i = 0; i < seriesFavoritas.length; i++) {
   //   // BUSCAR ESA SERIE Y MOSTRARLO
   //   fetch("" + seriesFavoritas[i] + "")
@@ -77,4 +60,6 @@ window.onload = function() {
   //       document.querySelector("ul").innerHTML += "<li><h3><a href=" + serie.data.id + ">" + serie.data.title + "</a></h3><img src=" + seria.data.images.original.url + "></li>";
   //     })
   // }
+})
+
 }
