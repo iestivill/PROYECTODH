@@ -123,7 +123,7 @@ if (seriesFavoritas.includes(idSerie)) {
 
 
 
-fetch("" + idSerie + "")
+fetch("https://api.themoviedb.org/3/tv/" + idSerie + "?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
   .then(function(response) {
     return response.json();
   })
