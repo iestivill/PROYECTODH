@@ -105,7 +105,7 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095
 
 var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
-// Si todavía no tenía gifs favoritos
+// Si todavía no tenía series favoritos
 if (recuperoStorage == null) {
   // Creo una lista vacia
   seriesFavoritas = [];
@@ -136,7 +136,7 @@ fetch("" + idSerie + "")
 
 
     //Paso 2: Modificar la informacion
-    // Si el gif ya era favorito
+    // Si el serie ya era favorito
     if (seriesFavoritas.includes(idSerie)) {
       // Lo quito
       var index = seriesFavoritas.indexOf(idSerie);
@@ -144,7 +144,7 @@ fetch("" + idSerie + "")
       document.querySelector("button").innerHTML = "AGREGAR FAVORITO";
     } else {
       //Lo agrego
-    seriesFavoritas.push(idGif);
+    seriesFavoritas.push(idSerie);
       document.querySelector("button").innerHTML = "QUITAR DE FAVORITOS";
     }
 
