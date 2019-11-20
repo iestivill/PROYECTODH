@@ -147,3 +147,13 @@ text-align: center;
 }
 
 /* Fin Footer */
+
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+
+}
+/* tablet */
+@media only screen and (max-width: 768px) {
+
+}

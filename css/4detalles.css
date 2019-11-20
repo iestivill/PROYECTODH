@@ -234,3 +234,13 @@ STYLE HERNI
 .combo-texto h3 {
   margin-right: 10px
 }
+
+
+/* mobile */
+@media only screen and (max-width: 480px) {
+
+}
+/* tablet */
+@media only screen and (max-width: 768px) {
+
+}
