@@ -9,6 +9,8 @@ window.onload = function(){
   var sinG = generosObj.get('sinG');
   // capturo el campo de los años
   var year = generosObj.get('year');
+// capturo orden de los resultados
+  var order = generosObj.get('order');
 
 
   // fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
@@ -136,12 +138,15 @@ window.onload = function(){
           var selectGeneros = document.querySelector("#formulario-generos");
           var selectSinGeneros = document.querySelector("#nodeseado");
           var selectAnio = document.querySelector("#selectanio");
+          var selectOrder = document.querySelector("#selectorder")
           var opcionGeneroElegido = selectGeneros.options[selectGeneros.selectedIndex].value;
           var opcionSinGenero = selectSinGeneros.options[selectSinGeneros.selectedIndex].value;
           var opcionAnioElegido = selectAnio.options[selectAnio.selectedIndex].value;
+          var opcionSelectOrder = selectOrder.options[selectOrder.selectedIndex].value;
           console.log(opcionGeneroElegido);
           console.log(opcionSinGenero);
           console.log(opcionAnioElegido);
+          console.log(opcionSelectOrder);
 
           var error = false;
 
@@ -168,46 +173,71 @@ window.onload = function(){
 
 
 
+
           }
 
 
+          }
 
-}
+// recuperar parametro de la url
 
-var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&sort_by=popularity.desc"
-if (year != ""){
-  urlBuscar += "&first_air_date_year="+ year
-}
-if (conG != ""){
-  urlBuscar += "&with_genres="+ conG
-}
-if (sinG != ""){
-  urlBuscar += "&without_genres="+ sinG
-}
-console.log(urlBuscar);
-          fetch(urlBuscar)
-          .then(function(response2){
-            return response2.json();
-          })
-          .then(function(respuesta2) {
-            var pelis = respuesta2.results;
-            var prepath = 'https://image.tmdb.org/t/p/original/'
-            // console.log(pelis);
-            var ul = document.querySelector(".resultadosbusc")
-            for (var i = 0; i < pelis.length; i++) {
-              if(pelis[i].poster_path != null){
-                var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
-                a += '<li>'
-                a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
-                a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
-                a += '</li>'
-                a += '</a>'
-                ul.innerHTML += a;
+
+          var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7"
+          if (order != "" ){
+            console.log("hola");
+            urlBuscar += "&sort_by="+ order
+          }
+
+          if (year != ""){
+            urlBuscar += "&first_air_date_year="+ year
+          }
+          if (conG != ""){
+            urlBuscar += "&with_genres="+ conG
+          }
+          if (sinG != ""){
+            urlBuscar += "&without_genres="+ sinG
+          }
+
+          //
+          //   urlBuscar += "&vote_average.asc="+ order
+          //
+          // }
+
+
+          //var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&sort_by=popularity.desc"
+          //if {
+            //urlBuscar += "&first_air_date_year="+ order
+            //}
+
+
+            //vote_average.desc, vote_average.asc, first_air_date.desc, first_air_date.asc, popularity.desc, popularity.asc
+
+            console.log(urlBuscar);
+            fetch(urlBuscar)
+            .then(function(response2){
+              return response2.json();
+            })
+            .then(function(respuesta2) {
+              var pelis = respuesta2.results;
+              var prepath = 'https://image.tmdb.org/t/p/original/'
+              // console.log(pelis);
+              var ul = document.querySelector(".resultadosbusc")
+              for (var i = 0; i < pelis.length; i++) {
+                if(pelis[i].poster_path != null){
+                  var a = '<a href="detalle.html?id='+ pelis[i].id + '">'
+                  a += '<li>'
+                  a += '<img src="'+prepath+pelis[i].poster_path+'" alt="">'
+                  a += '<div class="uk-position-center uk-panel"><h1>'+pelis[i].name.toUpperCase()+'</h1></div>'
+                  a += '</li>'
+                  a += '</a>'
+                  ul.innerHTML += a;
+                }
+
               }
 
             }
-
-          }
           )
+
+
 
 }
