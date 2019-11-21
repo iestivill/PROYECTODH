@@ -120,8 +120,11 @@ window.onload = function(){
           }
         }
 
+      //selecciona el Año de inicio y fin  i > bno puede pasar de 2020
         for (var i = 2020; i > 1959; i--) {
+          // introduce en el scroll-fomrulario
           var option = '<option value="'+ i +'">'+ i +'</option>'
+          //inner html para meterlko en el HTML
           document.querySelector("#selectanio").innerHTML+=option
         }
 
