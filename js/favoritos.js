@@ -15,7 +15,7 @@ window.onload = function() {
     }
   })
 
-if (localStorage.getItem("usuario")!= null){
+
   // favoritos
     //Paso 1: Leo Storage
 
@@ -69,13 +69,7 @@ if (localStorage.getItem("usuario")!= null){
 }
 
 
-  }
 
-else {
 
-  alert("Hace login para tener favoritos!")
-  location.href = "login.html"
-
-}
 
 }
