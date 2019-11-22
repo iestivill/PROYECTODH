@@ -85,7 +85,12 @@ text-decoration: none;
 }
 
 h1.genreTitle{
-color: black;
+
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  text-align: center;
+  margin-top: 1.5%;
 
 
 }

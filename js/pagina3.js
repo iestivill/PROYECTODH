@@ -125,17 +125,22 @@ window.onload = function(){
           // introduce en el scroll-fomrulario
           var option = '<option value="'+ i +'">'+ i +'</option>'
           //inner html para meterlko en el HTML
+          //document quiery selector para seleccionar parte del HTML
+          // +=  DECILE A LA A LE QUIERO SIEGUR SUMANDO HTML TENGO UNA LISTA Y LE INSERTO EL A Y RELLENO DANDO VULETAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO, METE ESTO
           document.querySelector("#selectanio").innerHTML+=option
         }
 
 
       })
+      //catch(function(e) para ver si hay un error
+      // console log para mostrar el error en la consola
       .catch(function(e){
         console.log(e)
 
       })
 
       var form = document.querySelector('.formularioform')
+      // onsumbit cuanod lo mande lo que tiene que hacer
       form.onsubmit = function(e) {
           // e.preventDefault()
           var selectGeneros = document.querySelector("#formulario-generos");
@@ -151,9 +156,10 @@ window.onload = function(){
           console.log(opcionAnioElegido);
           console.log(opcionSelectOrder);
 
+// error del prevent default
           var error = false;
 
-
+// si lkos dos PRIMEROS campos no estan seleccionados, prebvent default, error, alert
           if (opcionGeneroElegido == "" || opcionSinGenero == ""){
             error = true;
             e.preventDefault()
@@ -162,7 +168,7 @@ window.onload = function(){
           }
 
 
-
+// si la opcion de generos es igual, error y prevent default, alert
           if (opcionGeneroElegido == opcionSinGenero){
             error = true;
             e.preventDefault()
@@ -171,7 +177,7 @@ window.onload = function(){
           }
 
 
-
+// SI ERROR ES FALSO, NO HAY ERROR FUNCIONA, HACE TODO ESO
           if (error == false) {
 
 
@@ -184,10 +190,11 @@ window.onload = function(){
 
 // recuperar parametro de la url
 
-
+// AGARRRO LA URL
+// AGARRRO LA URL IF EL
+// !=
           var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7"
           if (order != "" ){
-            console.log("hola");
             urlBuscar += "&sort_by="+ order
           }
 
