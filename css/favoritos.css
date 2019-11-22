@@ -71,7 +71,13 @@ font-weight: bolder;
 color: #000000;
 }
 
-
+#titulofav {
+  margin-top: 2%;
+  font-weight: bold;
+  color: white;
+  background-color: black;
+  text-align: center;
+}
 
 h2 {
 
