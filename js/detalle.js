@@ -62,7 +62,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7
   var key = datos.results[i].key
   var youtube = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
   var trailer = document.querySelector(".trailer").innerHTML += youtube
-  console.log(youtube);
+  //console.log(youtube);
 }
 })
 //termina trailer

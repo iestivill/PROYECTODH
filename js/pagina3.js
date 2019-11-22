@@ -13,72 +13,6 @@ window.onload = function(){
   var order = generosObj.get('order');
 
 
-  // fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
-  // .then(function(response) {
-  //   return response.json();
-  // })
-  // .then(function(respuesta) {
-  //   for (var i = 0; i < respuesta.genres.length; i++) {
-  //     var listadoGeneros = document.querySelector("#listado-de-generos");
-  //     listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
-  //     if(respuesta.genres[i].id == idGenero){
-  //       // console.log('hola');
-  //       var h1 = document.querySelector('.genreTitle')
-  //       h1.innerHTML = respuesta.genres[i].name
-  //     }
-  //   }
-  //
-  // })
-  // .catch(function(e){
-  //   console.log(e)
-  //
-  // })
-
-
-    // fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
-    // .then(function(response) {
-    //   return response.json();
-    // })
-    // .then(function(respuesta) {
-    //   for (var i = 0; i < respuesta.genres.length; i++) {
-    //     var listadoGeneros = document.querySelector("#formulario-generos");
-    //     listadoGeneros.innerHTML +='<option value="' + respuesta.genres[i].id +'" > '+ respuesta.genres[i].name +' </option>';
-    //     if(respuesta.genres[i].id == idGenero){
-    //       // console.log('hola');
-    //       var h1 = document.querySelector('.genreTitle')
-    //       h1.innerHTML = respuesta.genres[i].name
-    //     }
-    //   }
-    //
-    // })
-    // .catch(function(e){
-    //   console.log(e)
-    //
-    // })
-
-
-
-//   fetch("https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&with_genres="+ idGenero)
-// .then(function(r){
-//   return r.json()
-// })
-//   .then(function(data){
-//     // console.log(data)
-//     var series = data.results
-//     var prepath = 'https://image.tmdb.org/t/p/original/'
-//     // console.log(pelis);
-//     var ul = document.querySelector(".slide-series")
-//     for (var i = 0; i < series.length; i++) {
-//       var a = '<a href="detalle.html?id='+ series[i].id + '">'
-//       a += '<li>'
-//       a += '<img src="'+prepath+series[i].poster_path+'" alt="">'
-//       a += '<div class="uk-position-center uk-panel"><h1>'+series[i].name+'</h1></div>'
-//       a += '</li>'
-//       a += '</a>'
-//       ul.innerHTML += a;
-//     }
-//   })
-
 
 // FETCH es un pedido de informacion a una direccion (url)
 // pedido ASINCRONICO
@@ -120,13 +54,15 @@ window.onload = function(){
           }
         }
 
-      //selecciona el Año de inicio y fin  i > bno puede pasar de 2020
+      //selecciona el Año de inicio y fin  i > no puede pasar de 2020
+      // Introduce en el scroll-formulario, cada valor de i en la var option cada numerito
+
         for (var i = 2020; i > 1959; i--) {
-          // introduce en el scroll-fomrulario
-          var option = '<option value="'+ i +'">'+ i +'</option>'
           //inner html para meterlko en el HTML
+          // METE EN LAS OPCIONES POR CADA I UN Año
+          var option = '<option value="' + i + '">' + i + '</option>'
           //document quiery selector para seleccionar parte del HTML
-          // +=  DECILE A LA A LE QUIERO SIEGUR SUMANDO HTML TENGO UNA LISTA Y LE INSERTO EL A Y RELLENO DANDO VULETAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO, METE ESTO
+          // += LE INSERTO EL A Y RELLENO DANDO VUELTAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO
           document.querySelector("#selectanio").innerHTML+=option
         }
 
@@ -140,14 +76,16 @@ window.onload = function(){
       })
 
       var form = document.querySelector('.formularioform')
-      // onsumbit cuanod lo mande lo que tiene que hacer
+      // onsumbit cuando lo mande lo que tiene que hacer
       form.onsubmit = function(e) {
           // e.preventDefault()
           var selectGeneros = document.querySelector("#formulario-generos");
           var selectSinGeneros = document.querySelector("#nodeseado");
           var selectAnio = document.querySelector("#selectanio");
           var selectOrder = document.querySelector("#selectorder")
+          // cual es la opcion que realmenre elegigio. el value busca el valor que elegiste dentro del index y la mete ahi
           var opcionGeneroElegido = selectGeneros.options[selectGeneros.selectedIndex].value;
+          // RETORNA UN DROPDOWN LIST EN EL INDEX
           var opcionSinGenero = selectSinGeneros.options[selectSinGeneros.selectedIndex].value;
           var opcionAnioElegido = selectAnio.options[selectAnio.selectedIndex].value;
           var opcionSelectOrder = selectOrder.options[selectOrder.selectedIndex].value;
@@ -156,10 +94,11 @@ window.onload = function(){
           console.log(opcionAnioElegido);
           console.log(opcionSelectOrder);
 
-// error del prevent default
+// error del prevent default SI ERROR ES IGUALA FALSE EJECUTA TODO LO DE ARRIBA
           var error = false;
 
-// si lkos dos PRIMEROS campos no estan seleccionados, prebvent default, error, alert
+// si los dos PRIMEROS campos no estan seleccionados, prebvent default, error, alert
+// Si alguno de los dos || esta vacio error
           if (opcionGeneroElegido == "" || opcionSinGenero == ""){
             error = true;
             e.preventDefault()
@@ -177,7 +116,7 @@ window.onload = function(){
           }
 
 
-// SI ERROR ES FALSO, NO HAY ERROR FUNCIONA, HACE TODO ESO
+// SI ERROR ES FALSO (funciona), NO HAY ERROR FUNCIONA, HACE TODO ESO
           if (error == false) {
 
 
@@ -193,7 +132,9 @@ window.onload = function(){
 // AGARRRO LA URL
 // AGARRRO LA URL IF EL
 // !=
+// si paao todos los chekpoints ppne todo loq ue puso el usuario en el prden que pidio
           var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7"
+          // si order no esta vacio metele != SI ORDER ES DIFERENTE A VACIO HAY ALGO ADENTRO A URL BUSCAR AGREGALE SORT BY + LO QUE QUERES QUE META (ORDER)
           if (order != "" ){
             urlBuscar += "&sort_by="+ order
           }
@@ -201,28 +142,18 @@ window.onload = function(){
           if (year != ""){
             urlBuscar += "&first_air_date_year="+ year
           }
+
           if (conG != ""){
             urlBuscar += "&with_genres="+ conG
           }
+
           if (sinG != ""){
             urlBuscar += "&without_genres="+ sinG
           }
 
-          //
-          //   urlBuscar += "&vote_average.asc="+ order
-          //
-          // }
-
-
-          //var urlBuscar = "https://api.themoviedb.org/3/discover/tv?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&sort_by=popularity.desc"
-          //if {
-            //urlBuscar += "&first_air_date_year="+ order
-            //}
-
-
-            //vote_average.desc, vote_average.asc, first_air_date.desc, first_air_date.asc, popularity.desc, popularity.asc
-
+//---------------------------------<>---------------------------------------------------------------------
             console.log(urlBuscar);
+            // busca el api que hicite con api resultados pasa de json a array
             fetch(urlBuscar)
             .then(function(response2){
               return response2.json();
