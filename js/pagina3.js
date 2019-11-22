@@ -85,6 +85,7 @@ window.onload = function(){
           var selectOrder = document.querySelector("#selectorder")
           // cual es la opcion que realmenre elegigio. el value busca el valor que elegiste dentro del index y la mete ahi
           var opcionGeneroElegido = selectGeneros.options[selectGeneros.selectedIndex].value;
+          // RETORNA UN DROPDOWN LIST EN EL INDEX
           var opcionSinGenero = selectSinGeneros.options[selectSinGeneros.selectedIndex].value;
           var opcionAnioElegido = selectAnio.options[selectAnio.selectedIndex].value;
           var opcionSelectOrder = selectOrder.options[selectOrder.selectedIndex].value;
@@ -93,7 +94,7 @@ window.onload = function(){
           console.log(opcionAnioElegido);
           console.log(opcionSelectOrder);
 
-// error del prevent default
+// error del prevent default SI ERROR ES IGUALA FALSE EJECUTA TODO LO DE ARRIBA
           var error = false;
 
 // si los dos PRIMEROS campos no estan seleccionados, prebvent default, error, alert
@@ -150,7 +151,7 @@ window.onload = function(){
             urlBuscar += "&without_genres="+ sinG
           }
 
-
+//---------------------------------<>---------------------------------------------------------------------
             console.log(urlBuscar);
             // busca el api que hicite con api resultados pasa de json a array
             fetch(urlBuscar)
