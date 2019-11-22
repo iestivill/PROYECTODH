@@ -60,7 +60,7 @@ window.onload = function() {
           a += '<div class="uk-position-center uk-panel"><h1>'+pelis.name.toUpperCase()+'</h1></div>'
           a += '</li>'
           a += '</a>'
-         dentro del "ul" (que es el carrousel) ,dentro del HTML,
+// dentro del "ul" (que es el carrousel) ,dentro del HTML,
           // las agrega al "ul"sin pisar lo que habia antes cada vez que se ejecuta el fetch
           ul.innerHTML += a;
 
