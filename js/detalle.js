@@ -62,15 +62,13 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7
   var key = datos.results[i].key
   var youtube = '<iframe width="560" height="315" src="https://www.youtube.com/embed/' + key + '" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
   var trailer = document.querySelector(".trailer").innerHTML += youtube
-  console.log(youtube);
+  //console.log(youtube);
 }
 })
-
-
-
-
 //termina trailer
 
+
+//empieza recomendaciones
   fetch("https://api.themoviedb.org/3/tv/" + id + "/recommendations?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US&page=1")
   .then(function(response) {
     return response.json();
@@ -89,6 +87,10 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7
       ul.innerHTML += a;
 
 }  })
+// termina recomendaciones
+
+
+//listado de generos header
 fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
 .then(function(response) {
   return response.json();
@@ -102,7 +104,12 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095
   }
 })
 
+// termina listado de generos
 
+
+
+// empieza boton de hacer favorito
+//busca las series favoritas localStorage
 var recuperoStorage = localStorage.getItem("seriesFavoritas");
 
 // Si todavía no tenía series favoritos
@@ -113,44 +120,37 @@ if (recuperoStorage == null) {
   // Descomprimo el TEXTO que tenia en storage en el array que necesito trabajar
   seriesFavoritas = JSON.parse(recuperoStorage);
 }
-
+//busca en el url el id
 var datos = new URLSearchParams(location.search);
 var idSerie = datos.get("id");
-
+//si series favoritas ya tiene ese id cambia el texto del boton
 if (seriesFavoritas.includes(idSerie)) {
   document.querySelector(".fav").innerHTML = "QUITAR DE FAVORITOS";
 }
 
-
-
-// fetch("" + idSerie + "")
-//   .then(function(response) {
-//     return response.json();
-//   })
-//   .then(function(serie) {
-//     document.querySelector("h1").innerHTML = serie.data.title;
-//     document.querySelector("img").src = serie.data.images.original.url;
-//   })
-
+// cuando clickeas en el boton se ejecuta lo de abajo
   document.querySelector(".fav").onclick = function() {
 
 
     //Paso 2: Modificar la informacion
     // Si el serie ya era favorito
     if (seriesFavoritas.includes(idSerie)) {
-      // Lo quito
+      // indexOf Lo busca en el array y splice lo quita
       var index = seriesFavoritas.indexOf(idSerie);
     seriesFavoritas.splice(index, 1);
+    // cuando lo saca vuelve el texto para volver a agregarlo a favorito
       document.querySelector("button.fav").innerHTML = "AGREGAR FAVORITO";
     } else {
-      //Lo agrego
+      //si no esta, lo agrega
     seriesFavoritas.push(idSerie);
       document.querySelector("button.fav").innerHTML = "QUITAR DE FAVORITOS";
     }
 
 
     //Paso 3: Escribir en storage
+    //lo vuelve a comprimir en json en el localStorage
     var infoParaStorage = JSON.stringify(seriesFavoritas);
+    // setItem lo guarda en localStorage
     localStorage.setItem("seriesFavoritas", infoParaStorage);
     console.log(localStorage);
   }}
