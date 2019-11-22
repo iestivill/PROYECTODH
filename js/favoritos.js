@@ -52,16 +52,16 @@ window.onload = function() {
         var ul = document.querySelector(".slide-seriesFavoritas")
 // Este console.log me muestra todo lo que hay dentro del "ul", para verificar si es el lugar deseado para meter los resultados
         console.log(ul);
-//+= agrega las series fav (guardadas dentro de la variable "a"), las pone dentro de un "li", dentro del "ul" (que es el carrousel) ,dentro del HTML,
-// pero sin pisar lo que habia antes cada vez que se ejecuta el fetch
-          var a = '<a href="detalle.html?id='+ pelis.id + '">'
+  //+= agrega las series fav (guardadas dentro de la variable "a"), las pone dentro de un "li",
+  //con un "a" que te lleva a los detalles de la serie cuando haces click en su poster
+            var a = '<a href="detalle.html?id='+ pelis.id + '">'
           a += '<li>'
           a += '<img src="'+prepath+pelis.poster_path+'" alt="">'
           a += '<div class="uk-position-center uk-panel"><h1>'+pelis.name.toUpperCase()+'</h1></div>'
           a += '</li>'
           a += '</a>'
-
-// INSERTAR el "a" dentro de nuestra variable "ul"
+// dentro del "ul" (que es el carrousel) ,dentro del HTML,
+          // las agrega al "ul"sin pisar lo que habia antes cada vez que se ejecuta el fetch
           ul.innerHTML += a;
 
 
