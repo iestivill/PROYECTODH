@@ -56,19 +56,20 @@ window.onload = function(){
 
       //selecciona el Año de inicio y fin  i > no puede pasar de 2020
       // Introduce en el scroll-formulario, cada valor de i en la var option cada numerito
+      // i-- orden decendiente
 
         for (var i = 2020; i > 1959; i--) {
-          //inner html para meterlko en el HTML
-          // METE EN LAS OPCIONES POR CADA I UN Año
+
+          // Crea un option dntro del dropdown por cada año que hay
           var option = '<option value="' + i + '">' + i + '</option>'
-          //document quiery selector para seleccionar parte del HTML
-          // += LE INSERTO EL A Y RELLENO DANDO VUELTAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO
+          // += AGREGUE Y RELLENO DANDO VUELTAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO
+          //inner html para meterlko en el HTML
           document.querySelector("#selectanio").innerHTML+=option
         }
 
 
       })
-      //catch(function(e) para ver si hay un error
+      //catch(function(e) para ver si hay un error dentro de la funcion e
       // console log para mostrar el error en la consola
       .catch(function(e){
         console.log(e)
@@ -151,7 +152,7 @@ window.onload = function(){
             urlBuscar += "&without_genres="+ sinG
           }
 
-//---------------------------------<>---------------------------------------------------------------------
+//---------------------------------<>----------------------------------------------------------
             console.log(urlBuscar);
             // busca el api que hicite con api resultados pasa de json a array
             fetch(urlBuscar)
