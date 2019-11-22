@@ -133,7 +133,7 @@ if (seriesFavoritas.includes(idSerie)) {
 
 
     //Paso 2: Modificar la informacion
-    // Si el serie ya era favorito
+    // Si la serie ya era favorita
     if (seriesFavoritas.includes(idSerie)) {
       // indexOf Lo busca en el array y splice lo quita
       var index = seriesFavoritas.indexOf(idSerie);
