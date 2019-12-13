@@ -14,7 +14,7 @@ window.onload = function(){
         listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
         if(respuesta.genres[i].id == idGenero){
           // console.log('hola');
-          var h1 = document.querySelector('.genreTitle')
+          var h1 = dcument.querySelector('.genreTitle')
           h1.innerHTML = respuesta.genres[i].name.toUpperCase()
         }
       }

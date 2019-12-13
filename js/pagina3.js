@@ -62,7 +62,9 @@ window.onload = function(){
 
           // Crea un option dntro del dropdown por cada año que hay
           var option = '<option value="' + i + '">' + i + '</option>'
+
           // += AGREGUE Y RELLENO DANDO VUELTAS NO QUIERO QUE PISE LAS COSAS ANTERIORES EL += SUMA Y METE ESTO
+
           //inner html para meterlko en el HTML
           document.querySelector("#selectanio").innerHTML+=option
         }
@@ -84,7 +86,7 @@ window.onload = function(){
           var selectSinGeneros = document.querySelector("#nodeseado");
           var selectAnio = document.querySelector("#selectanio");
           var selectOrder = document.querySelector("#selectorder")
-          // cual es la opcion que realmenre elegigio. el value busca el valor que elegiste dentro del index y la mete ahi
+          // cual es la opcion que realmenre elegigio. el .value busca el valor que elegiste dentro del index y la mete ahi
           var opcionGeneroElegido = selectGeneros.options[selectGeneros.selectedIndex].value;
           // RETORNA UN DROPDOWN LIST EN EL INDEX
           var opcionSinGenero = selectSinGeneros.options[selectSinGeneros.selectedIndex].value;

@@ -1,6 +1,8 @@
 window.onload = function() {
+  // capturo de la URL la data que envio el form
   var queryStringObj = new URLSearchParams(location.search)
   var id = queryStringObj.get("id")
+
   fetch("https://api.themoviedb.org/3/tv/" + id + "?api_key=64473b4750029f7eee1095d5f01e52e7&language=en-US")
   .then(function(response) {
     return response.json();
@@ -45,7 +47,7 @@ for (var i = 0; i < data.created_by.length; i++) {
     resumen.innerHTML += data.overview
 
   })
-
+// para que muestre el error si es que hay
   .catch(function(e){
     console.log(e)
   })
@@ -82,7 +84,7 @@ fetch("https://api.themoviedb.org/3/tv/" + id + "/videos?api_key=64473b4750029f7
       a += '<li>'
       a += '<img src="'+prepath+recommendaciones[i].poster_path+'" alt="">'
       a += '<div class="uk-position-center uk-panel"><h1>'+recommendaciones[i].name.toUpperCase()+'</h1></div>'
-        a += '</li>'
+      a += '</li>'
       a += '</a>'
       ul.innerHTML += a;
 
@@ -100,6 +102,8 @@ fetch("https://api.themoviedb.org/3/genre/tv/list?api_key=64473b4750029f7eee1095
   // console.log(respuesta.genres[0].name);
   var listadoGeneros = document.querySelector("#listado-de-generos");
   for(var i = 0; i < respuesta.genres.length; i++) {
+
+    // NO SE ENTIENDE UNA CHOTA
     listadoGeneros.innerHTML += "<li><a href='generos.html?genero=" + respuesta.genres[i].id + "'>" + respuesta.genres[i].name + "</a></li>";
   }
 })
