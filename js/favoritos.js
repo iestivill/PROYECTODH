@@ -48,12 +48,19 @@ window.onload = function() {
 //+= agrega HTML dentro de la variable "a", pero sin pisar lo que habia antes cada vez que se ejecuta el fetch
           var a = '<a href="detalle.html?id='+ pelis.id + '">'
           a += '<li>'
+          //agrega el poster de la serie que elegimos y reemplaza la imagen del "prepath"
           a += '<img src="'+prepath+pelis.poster_path+'" alt="">'
+          //nombre de la serie centrado y todo mayuscula
           a += '<div class="uk-position-center uk-panel"><h1>'+pelis.name.toUpperCase()+'</h1></div>'
           a += '</li>'
           a += '</a>'
+<<<<<<< Updated upstream
 
 // INSERTAR el "a" dentro de nuestra variable "ul"
+=======
+//
+          // las agrega al "ul" (que es el carrousel) ,dentro del HTML, sin pisar lo que habia antes cada vez que se ejecuta el fetch
+>>>>>>> Stashed changes
           ul.innerHTML += a;
 
 
